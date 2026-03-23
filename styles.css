@@ -1,3 +1,95 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+    color: #222;
+}
+
+/* Top bar */
+.top-bar {
+    background-color: #262326;
+    color: white;
+}
+
+.top-bar-inner {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 32px 70px 24px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-name {
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: white;
+}
+
+/* Navigation */
+.site-nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 28px;
+    font-size: 1.05rem;
+    font-weight: 400;
+}
+
+.site-nav a:hover {
+    text-decoration: underline;
+}
+
+.site-nav a.active {
+    border-bottom: 2px solid white;
+    padding-bottom: 6px;
+}
+
+/* Hero */
+.hero {
+    background-color: #262326;
+    color: white;
+    text-align: center;
+    padding: 70px 20px 90px 20px;
+}
+
+.hero-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 5.5rem;
+    font-weight: 300;
+    margin: 20px 0 24px 0;
+}
+
+.hero-subtitle {
+    font-size: 1.9rem;
+    font-weight: 300;
+    margin: 0;
+    color: #f2f2f2;
+}
+
+/* Intro section */
+.intro {
+    background-color: #f3f3f3;
+    text-align: center;
+    padding: 70px 30px 40px 30px;
+}
+
+.intro-inner {
+    max-width: 1350px;
+    margin: 0 auto;
+}
+
+.intro p {
+    font-size: 1.7rem;
+    line-height: 1.5;
+    color: #26385d;
+    margin: 0 auto;
+}
+
+/* Feature grid */
 .feature-grid {
     max-width: 1450px;
     margin: 30px auto 70px auto;
@@ -12,10 +104,15 @@
     text-align: center;
 }
 
-.feature-image {
+.feature-image-wrap {
     width: 100%;
     aspect-ratio: 3 / 4;
-    /* portrait rectangle */
+    overflow: hidden;
+}
+
+.feature-image {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     display: block;
 }
@@ -42,4 +139,33 @@
     color: #4d6170;
     text-decoration: underline;
     font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+    .top-bar-inner {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .site-nav a {
+        margin: 0 12px;
+    }
+
+    .hero h1 {
+        font-size: 4rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.4rem;
+    }
+
+    .intro p {
+        font-size: 1.3rem;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
 }

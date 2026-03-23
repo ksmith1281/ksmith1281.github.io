@@ -5,7 +5,7 @@ body {
     color: #222;
 }
 
-/* Top dark band */
+/* Top bar */
 .top-bar {
     background-color: #262326;
     color: white;
@@ -26,7 +26,7 @@ body {
     color: white;
 }
 
-/* Nav */
+/* Navigation */
 .site-nav a {
     color: white;
     text-decoration: none;
@@ -70,11 +70,11 @@ body {
     color: #f2f2f2;
 }
 
-/* Intro block below hero */
+/* Intro section */
 .intro {
     background-color: #f3f3f3;
     text-align: center;
-    padding: 70px 30px 60px 30px;
+    padding: 70px 30px 40px 30px;
 }
 
 .intro-inner {
@@ -89,84 +89,81 @@ body {
     margin: 0 auto;
 }
 
-/* Lower content area */
-.content {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 10px 25px 60px 25px;
+/* Feature grid */
+.feature-grid {
+    max-width: 1450px;
+    margin: 30px auto 70px auto;
+    padding: 0 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+    background-color: #f3f3f3;
 }
 
-.section {
-    background: white;
-    padding: 24px;
-    margin-top: 24px;
-    border-radius: 10px;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
-}
-
-.section h2 {
-    margin-top: 0;
-    font-size: 2rem;
-}
-
-.section p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-.page-hero {
-    background-color: #262326;
-    color: white;
+.feature-card {
     text-align: center;
-    padding: 55px 20px 65px 20px;
 }
 
-.page-hero-inner {
-    max-width: 1100px;
-    margin: 0 auto;
+.feature-image {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    display: block;
 }
 
-.page-hero h1 {
-    font-size: 3.4rem;
-    font-weight: 300;
-    margin: 0 0 16px 0;
-}
-
-.page-hero p {
+.feature-card h2 {
+    margin: 18px 0 12px 0;
     font-size: 1.2rem;
-    margin: 0;
-    color: #f2f2f2;
+    font-weight: 400;
 }
 
-.publication {
-    background: white;
-    padding: 28px;
-    margin-top: 24px;
-    border-radius: 10px;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
-}
-
-.publication h2 {
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 1.7rem;
-    line-height: 1.3;
-}
-
-.publication h2 a {
-    color: #25385c;
-    text-decoration: none;
-}
-
-.publication h2 a:hover {
+.feature-card h2 a {
     text-decoration: underline;
+    color: #58767c;
 }
 
-.pub-meta {
+.feature-card p {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    color: #444;
+    margin: 0 12px 12px 12px;
+}
+
+.see-more {
+    color: #4d6170;
+    text-decoration: underline;
     font-size: 0.95rem;
-    font-weight: 600;
-    color: #666;
-    margin-bottom: 16px;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
+}
+
+/* Responsive fallback */
+@media (max-width: 1100px) {
+    .top-bar-inner {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .site-nav a {
+        margin: 0 12px;
+    }
+
+    .hero h1 {
+        font-size: 4rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.4rem;
+    }
+
+    .intro p {
+        font-size: 1.3rem;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-image {
+        height: auto;
+    }
 }

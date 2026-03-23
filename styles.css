@@ -406,3 +406,14 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+.publication-title a {
+    color: #26385d;
+    /* same tone as your intro text */
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.publication-title a:hover {
+    color: #000;
+}
